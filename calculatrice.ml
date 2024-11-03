@@ -64,5 +64,5 @@ let calculatrice string =
   calculatrice_rec string 0
 
 (* Exemple d'utilisation *)
-let expression = "+ 3 * 28 4"  (* Ceci représente : 3 + (2 * 4) *)
-let result = calculatrice expression  (* Évalue l'expression et stocke le résultat *)
+let expression = "+ 3 * 2 4"  (* Ceci représente : 3 + (2 * 4) *)
+let result = calculatrice expression  (* Évalue l'expression et stocke le résultat *) (*resultat devrait etre 11)
