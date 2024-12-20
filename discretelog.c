@@ -103,7 +103,7 @@ struct pair adder(char a, char b, char c)
   int cpt = 0;
   struct pair couple;
   if (a == '1') cpt++;
-  if (a == '1') cpt++;
+  if (b == '1') cpt++;
   if (c == '1') cpt++;
 
   if (cpt == 3) {couple.n1 = '1'; couple.n2 = '1';}
@@ -172,10 +172,13 @@ void mult_by(char a[], char b[]) // a = a * b
 {
   assert (31 == strlen(a));
   assert (31 == strlen(b));
-
+  int i = zero;
   /* TODO */
-  
-
+  while (is_greater(b,zero) {
+      if (b[30] == '1') {i = add_to(i , a);}
+      devide_by_two(b);
+      multiply_by_two(a);
+  return;
 }
 
 void expo(char a[], char b[]) // a = a ** b
