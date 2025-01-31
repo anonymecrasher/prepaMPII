@@ -1,0 +1,21 @@
+
+
+3 * (4 + 3)
+
+tant que liste token non vide :
+     creer pile nombre
+     creer pile operation
+     creer pile resultat
+     x = depile liste
+     si x est un nombre
+        empile x nombre
+     sinon
+        empile x dans operation
+     si nb nombre = nb operation + 1 && nb operation != 0
+        depile nombre dans resltat 
+        depile operation dans resultat
+
+
+pile nombre : 
+pile operation : 
+pile resultat : 4  3 *  3 +
