@@ -1,0 +1,33 @@
+#include "str.h"
+
+
+struct string_s str_create(int taille) {
+  struct string_s str;
+  str.data = malloc(n * sizeof(char));
+  str.len = 0;
+  str.max = n;
+  return str;
+}
+
+void copy_tab(int taille_1, char tab_1[], int taille_2, char tab_2[]){
+  assert (taille_1 < taille_2);
+  for (int i = 0; i < taille_1; i = i + 1)
+    {
+      tab_2[i] = tab_1[i];
+    }
+}
+
+struct string_s redimention(struct string_s str){
+  str_temp = str_create(str.max * 2)
+  copy_tab(str.len, str.data, str_temp.len, str_temp.data);
+  return str_temp
+}
+
+void str_add(struct string_s str, char c){
+  if (str.len + 1 >= str.max)
+    {
+      str = redimention(str)
+    }
+  str.data[(str.len+1)] = c;
+  str.len = str.len + 1;
+}
