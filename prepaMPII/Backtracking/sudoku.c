@@ -110,6 +110,23 @@ int main(int argc, char *argv[]){
   printf("\nSolving ...\n\n");
 
   print_grid(grille);
+  int grille1[9][9] = {
+    {9,6,0,0,0,0,0,0,0},
+    {0,8,0,0,0,0,0,0,0},
+    {0,0,7,0,0,0,0,0,0},
+    {0,0,0,6,0,0,0,0,0},
+    {0,0,0,0,5,0,0,0,0},
+    {0,0,0,0,0,4,0,0,0},
+    {0,0,0,0,0,0,3,0,0},
+    {0,0,0,0,0,0,0,2,0},
+    {0,0,0,0,0,0,0,0,1}
+  };
+  printf("%b", is_in_region);
+
+  print_grid(grille1);
+  printf("%b",solve(grille1));
+  printf("\nSolving ...\n\n");
+  print_grid(grille1);
 
   return 0;
 }

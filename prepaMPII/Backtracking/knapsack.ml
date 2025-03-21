@@ -19,3 +19,21 @@ let objet_alea () =
 let rec instance_alea n =
   if n = 0 then []
   else objet_alea () :: instance_alea (n-1)
+
+
+let is_valid x  p  pm = ((x.weight +. p) <= pm)
+let rec value ob_l = match ob_l with
+    | [] -> 0.
+    | hd :: tl -> hd.value +. (value tl)
+
+let rec objet_taken p v ob_t ob_l pm = match ob_l with
+    | [] -> []
+    | hd :: tl ->
+       if (is_valid hd p pm)
+       then let x = (objet_taken (p +. hd.weight) (v +. hd.value) (hd :: ob_t) tl pm)
+            in
+            if v > value x then ob_t
+            else x
+       else objet_taken (p +. hd.weight) (v +. hd.value) (ob_t) tl pm
+
+let x = objet_taken 0. 0. [] exemple 2.1
